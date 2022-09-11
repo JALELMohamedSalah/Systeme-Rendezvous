@@ -1,0 +1,46 @@
+<!--<p>create-rendezvous works!</p>
+<a href="/admin" class="nav-link" routerLink="admin">Ajouter un Rendez</a>-->
+<div class="col-md-8 offset-md-3">
+    <h3>Update un Rendez-Vous</h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label>Nom du Client</label>
+            <input type="text" class="form-control" id="nom_client"
+            [(ngModel)]= "rendezv.nom_client" name="nom_client">
+        </div>
+    
+        <div class="form-group">
+            <label>Prénom du Client</label>
+            <input type="text" class="form-control" id="prenom_client"
+            [(ngModel)]= "rendezv.prenom_client" name="prenom_client">
+        </div>
+    
+        <div class="form-group">
+            <label>Commentaire</label>
+            <input type="text" class="form-control" id="commentaire"
+            [(ngModel)]= "rendezv.commentaire" name="commentaire">
+        </div>
+    
+        <div class="form-group">
+            <label>Numero de telephone</label>
+            <input type="text" class="form-control" id="numtel"
+            [(ngModel)]= "rendezv.numtel" name="numtel">
+        </div>
+    
+        <div class="form-group">
+            <label>Date De Rendez-Vous</label>
+            <input type="datetime-local" class="form-control" id="date_rdv"
+            [(ngModel)]= "rendezv.date_rdv" name="date_rdv">
+        </div>
+    
+        <div class="form-group">
+            <label>Etat</label>
+            <input type="text" class="form-control" id="etat"
+            [(ngModel)]= "rendezv.etat" name="etat">
+        </div>
+         <button class="btn btn-success" type="submit">Update</button>
+    
+    </form>
+    
+    </div>

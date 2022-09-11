@@ -1,0 +1,24 @@
+<h2 style="margin-left: 400px">Liste Des Utilisateurs</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom Utilisateur</th>
+            <th>Email</th>
+            <th>Password</th>
+            <!--<th>Ajouter</th>
+            <th>Mettre à Jour</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users ">
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+           <!--<td>{{roles}}</td>-->
+            
+            <td button (click)="deleteUser(user.id)" class="btn btn-danger" 
+            style="margin-left: 10px"> Effacer</td>
+           
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+<h2>Liste Des Rendez-Vous</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Commentaire</th>
+            <th>telephone</th>
+            <th>Date De Rendez-Vous</th>
+            <th>Etat</th>
+            <th>User</th>
+            <th>Ajouter</th>
+            <th>Mettre à Jour</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rendezvous of rdv ">
+            <td>{{rendezvous.nom_client}}</td>
+            <td>{{rendezvous.prenom_client}}</td>
+            <td>{{rendezvous.commentaire}}</td>
+            <td>{{rendezvous.numtel}}</td>
+            <td>{{rendezvous.date_rdv}}</td>
+            <td>{{rendezvous.etat}}</td>
+            <td>{{rendezvous.user.username}}</td>
+            <td > <button (click)="updateRendezvous(rendezvous.idRdv)" class="btn btn-info">Update</button></td>
+            <td ><button button (click)="deleteRendezvous(rendezvous.idRdv)" class="btn btn-danger"> Delete</button></td>
+            <td > <button (click)="RendezvousDetails(rendezvous.idRdv)" class="btn btn-info">View</button></td>
+        </tr>
+    </tbody>
+</table>
